@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Type Conversions</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    // Function to add output to the HTML document
+    function addToOutput(text) {
+      const outputDiv = document.getElementById('output');
+      outputDiv.innerHTML += `<p>${text}</p>`;
+    }
+
+    // String Conversion
+    let value = true;
+    addToOutput(typeof value); // Output: boolean
+    value = String(value); // Convert to string
+    addToOutput(typeof value); // Output: string
+
+    // Numeric Conversion
+    let str = "123";
+    addToOutput(typeof str); // Output: string
+    let num = Number(str); // Convert to number
+    addToOutput(typeof num); // Output: number
+
+    // Boolean Conversion
+    addToOutput(Boolean(1)); // Output: true
+    addToOutput(Boolean(0)); // Output: false
+    addToOutput(Boolean("hello")); // Output: true
+    addToOutput(Boolean("")); // Output: false
+  </script>
+</body>
+</html>
