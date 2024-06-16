@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page</title>
+    <script>
+        function askNameAndGreet() {
+            // Ask for the user's name
+            let name = prompt("What is your name?", "Guest");
+
+            // Check if the user entered a name or canceled the input
+            if (name !== null && name.trim() !== "") {
+                alert(`Hello, ${name}!`);
+            } else {
+                alert("You didn't enter your name!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="askNameAndGreet()">Enter Your Name</button>
+</body>
+</html>
