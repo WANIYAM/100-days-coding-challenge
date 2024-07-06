@@ -1,0 +1,37 @@
+Summary of DNS (Domain Name System)
+
+DNS (Domain Name System) is essential for navigating the internet, functioning like a phonebook for websites. When you want to visit a website, you typically use its domain name (e.g., www.example.com), but your browser needs the corresponding IP address to locate and access the website. DNS translates the human-readable domain names into IP addresses, enabling your browser to find and load the desired website.
+
+Here's a simplified analogy:
+- **Phonebook Analogy:** Just as you can call a friend by selecting their name from your phonebook, your browser uses DNS to find the IP address associated with a domain name.
+- **DNS Process:** When you enter a domain name, the DNS system goes through several steps (like querying DNS servers) to retrieve the correct IP address, allowing your browser to connect to the website.
+
+This process involves multiple servers and steps, but the fundamental concept is that DNS serves as the intermediary that translates domain names into IP addresses, ensuring seamless web browsing.
+
+Key Points:
+- DNS is like a phonebook for the internet.
+- It translates domain names (e.g., www.example.com) into IP addresses.
+- This translation allows browsers to locate and load websites.
+
+Kamran Ahmed's article provides a detailed explanation and a visual illustration to help understand the DNS process.
+
+The image depicts DHCP (Dynamic Host Configuration Protocol) at work in a home network.
+
+What is DHCP?
+
+DHCP is a protocol that automatically assigns unique IP addresses to devices on a network. This eliminates the need for manual configuration and simplifies network management.
+
+How it works:
+
+1. New device joins:A new device broadcasts a message seeking a DHCP server.
+2. DHCP server offers address: The router's DHCP server offers an available IP address to the device.
+3. Device requests address: The device requests the offered IP address.
+4. Server acknowledges: The server acknowledges the request, finalizing the assignment.
+5. Lease and renewal: The IP address is assigned for a specific lease time, requiring periodic renewals by the device.
+
+Benefits:
+
+* Automatic configuration: No manual setup needed for each device.
+* Scalability: DHCP can handle new devices joining the network.
+* Efficiency: Tracks available addresses and reassigns them for optimal use.
+
