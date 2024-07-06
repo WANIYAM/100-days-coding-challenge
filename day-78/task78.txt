@@ -1,9 +1,0 @@
-The image summarizes the differences between SSL, TLS, HTTPS, and SSH.
-
-* **SSL and TLS** are cryptographic protocols that encrypt data sent over a network. They are often used interchangeably, but TLS is the newer and more secure version. SSL was renamed TLS in 1999.
-
-* **HTTPS** stands for Hypertext Transfer Protocol Secure. It is HTTP, the protocol used to communicate between web browsers and servers, wrapped in TLS. HTTPS encrypts communication between a web browser and a server, protecting sensitive information from being intercepted by hackers.
-
-* **SSH** stands for Secure Shell. It is a different cryptographic protocol altogether from SSL/TLS and HTTPS. SSH is used for secure remote access to a server. It allows you to log in to a server and execute commands as if you were sitting at the server itself, but over a secure connection. SSH is designed as a secure replacement for older protocols like telnet, rsh, and rlogin.
-
-In short, SSL/TLS and HTTPS are used to encrypt communication between devices, while SSH is used for secure remote access to servers.
