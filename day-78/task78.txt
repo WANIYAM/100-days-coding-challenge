@@ -1,0 +1,10 @@
+ Core Web Vitals are a set of metrics that Google uses to measure the user experience of a website. The three Core Web Vitals metrics are Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
+
+* LCP is a measure of how long it takes for the largest contentful element on a webpage to load. A good LCP score is less than 2.5 seconds.
+
+* FID is a measure of how long it takes for a browser to respond to a user's first interaction with a webpage. A good FID score is less than 100 milliseconds.
+
+* CLS is a measure of how much the layout of a webpage shifts while it is loading. A good CLS score is less than 0.1.
+
+The webpage also provides information on how to measure Core Web Vitals. There are a number of tools that can be used to measure Core Web Vitals, including the npm package called "web-vitals", the Chrome DevTools extension Lighthouse, and PageSpeed Insights.
+ 
