@@ -1,0 +1,35 @@
+Understanding how the internet works is essential for every developer, given the web's integral role in modern technology. Here’s a comprehensive breakdown based on Kamran Ahmed's guide:
+
+### What is the Internet?
+The Internet is a global network of interconnected computers that communicate via standardized protocols. It's a vast and decentralized system that no single person or organization controls.
+
+### How Information Moves on the Internet
+Information travels as bits (binary data) over various mediums:
+- **Ethernet Cables:** Commonly used in wired networks, offering reliable connections.
+- **Fiber Optic Cables:** Enable fast data transfer over long distances using light signals.
+- **Wi-Fi (Wireless Signals):** Uses radio waves for wireless data transmission.
+
+### IP Addresses and DNS
+- **IP (Internet Protocol):** Assigns unique addresses to devices, enabling them to locate and communicate with each other.
+- **DNS (Domain Name System):** Translates human-readable domain names (e.g., www.example.com) into IP addresses.
+
+### Packets, Routing, and Reliability
+Data on the Internet is split into packets that travel independently and may take different routes to reach their destination. This method ensures reliable and efficient data transfer.
+
+### HTTP and HTML
+- **HTTP (Hypertext Transfer Protocol):** The foundation of data communication on the web, enabling the transfer of webpages.
+- **HTML (Hypertext Markup Language):** The standard language for creating and formatting webpages.
+
+### Encryption and Public Keys
+Cryptography ensures secure communication over the Internet. Techniques like SSL/TLS encrypt data to protect it from unauthorized access.
+
+### Cybersecurity and Crime
+Cybersecurity encompasses protective measures against criminal activities involving networks and the internet. Common threats include hacking, phishing, and malware.
+
+### Additional Resources
+To dive deeper into specific topics, Kamran Ahmed recommends resources on DNS and security, such as howdns.works and the cartoon intro to DNS over HTTPS.
+
+### Videos and Further Learning
+Kamran Ahmed’s guide includes a series of informative videos from code.org that cover the history of the Internet, data transfer mediums, IP and DNS protocols, packet routing, HTTP, encryption, and cybersecurity.
+
+By understanding these fundamentals, developers can better appreciate the complexity and functionality of the internet, ultimately enhancing their skills and knowledge in web development.
