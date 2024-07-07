@@ -1,0 +1,77 @@
+HTTP Basic Authentication
+
+Overview
+HTTP Basic Authentication is a method of providing credentials in HTTP requests as defined in RFC7617. It is a simple mechanism where the client provides the username and password encoded in the Authorization header of the HTTP request.
+
+How it Works
+1. **Initial Request**:
+   - The client (browser) makes an initial request to the server.
+   - The server checks for the `Authorization` header.
+   - If the `Authorization` header is missing, the server responds with `401 Unauthorized` and includes the `WWW-Authenticate` header set to `Basic realm="user_pages"`.
+
+2. **Authentication Prompt**:
+   - The browser displays an authentication popup based on the `WWW-Authenticate` header.
+
+3. **Submitting Credentials**:
+   - The user enters their credentials (username and password) in the popup.
+   - The browser encodes the credentials using base64 and includes them in the `Authorization` header for the subsequent request.
+
+4. **Server Validation**:
+   - The server decodes the credentials and validates them.
+   - If the credentials are valid, the server processes the request.
+   - If invalid, the server responds with `401 Unauthorized`.
+Basic Authentication Implementation in Node.js
+
+Project Setup
+The sample project for implementing Basic Authentication in Node.js is available on GitHub: [kamranahmedse/node-basic-auth-example](https://github.com/kamranahmedse/node-basic-auth-example).
+
+Project Structure
+1. **index.js**:
+   ```javascript
+   const express = require('express');
+   const authMiddleware = require('./auth');
+
+   const app = express();
+   const port = 3000;
+
+   // Middleware for Basic Authentication
+   app.use(authMiddleware);
+
+   app.get('/', (req, res) => {
+     res.send('Hello World!');
+   });
+
+   app.listen(port, () => {
+     console.log(`App running @ http://localhost:${port}`);
+   });
+   ```
+
+2. **auth.js**:
+   ```javascript
+   const base64 = require('base-64');
+
+   function decodeCredentials(authHeader) {
+     const encoded = authHeader.split(' ')[1];
+     const decoded = base64.decode(encoded);
+     const [username, password] = decoded.split(':');
+     return [username, password];
+   }
+
+   module.exports = function (req, res, next) {
+     // Extract and decode credentials
+     const authHeader = req.headers.authorization || '';
+     const [username, password] = decodeCredentials(authHeader);
+
+     // Verify the credentials
+     if (username === 'admin' && password === 'admin') {
+       return next();
+     }
+
+     // Respond with authenticate header on auth failure
+     res.set('WWW-Authenticate', 'Basic realm="user_pages"');
+     res.status(401).send('Authentication required.');
+   };
+   ```
+
+Summary
+HTTP Basic Authentication is a straightforward way to secure endpoints. It is widely supported by browsers and can be easily implemented in Node.js using middleware. However, for more secure applications, consider using more robust authentication mechanisms like OAuth, JWT, or session-based authentication.
