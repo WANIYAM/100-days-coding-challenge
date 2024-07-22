@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting Started with React</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    <!-- Load React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- Load ReactDOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React Code -->
+    <script type="text/jsx">
+      // Select the DOM node with id 'app'
+      const domNode = document.getElementById('app');
+      // Create a root for React
+      const root = ReactDOM.createRoot(domNode);
+      // Render an h1 element inside the root
+      root.render(<h1>Develop. Preview. Ship.</h1>);
+    </script>
+  </body>
+</html>
