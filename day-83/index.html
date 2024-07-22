@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Components Example</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- Load React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- Load ReactDOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Load Babel for JSX support -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React Code -->
+    <script type="text/jsx">
+      // Define a Header component
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      // Define a HomePage component that nests the Header component
+      function HomePage() {
+        return (
+          <div>
+            <Header />
+            <p>Welcome to the React App!</p>
+          </div>
+        );
+      }
+
+      // Get the DOM element where the React app will be rendered
+      const app = document.getElementById('app');
+      
+      // Create a React root and render the HomePage component
+      const root = ReactDOM.createRoot(app);
+      root.render(<HomePage />);
+    </script>
+  </body>
+</html>
